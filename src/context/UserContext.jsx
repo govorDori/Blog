@@ -98,7 +98,7 @@ export const UserProvider = ({children}) => {
 
 	return(
 		<UserContext.Provider value={{user,signInUser,logoutUser,
-            signUpUser,msg,setMsg,resetPassword,updateCredentials,updateUser, resetPassword, deleteAccount}}>
+            signUpUser,msg,setMsg,resetPassword,updateCredentials,updateUser, deleteAccount}}>
             {children}
         </UserContext.Provider>
 	)
