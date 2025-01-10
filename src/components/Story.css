@@ -1,11 +1,11 @@
 .rsw-ce{
-	background-color: wheat!important;
+	background-color: black!important;
 	min-height: 200px;
-	min-width: 800px;
+	min-width: 200px!important;
 }
 
 .rsw-editor{
-	background-color: wheat!important;
+	background-color: black!important;
 	min-height: 200px;
-	min-width: 800px;
+	min-width: 200px!important;
 }

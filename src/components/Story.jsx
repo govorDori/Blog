@@ -4,7 +4,7 @@ import { EditorProvider } from 'react-simple-wysiwyg';
 import './Story.css'
 
 export const Story = ({setStory,uploaded}) => {
-  const [html, setHtml] = useState('Write something nice!');
+  const [html, setHtml] = useState('');
   
 
   return (

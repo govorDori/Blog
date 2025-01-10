@@ -37,8 +37,8 @@ export const Header = () => {
 
 	return (
 		<div className='headerContainer'>
-			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid rgb(90, 47, 47)', backgroundColor:"rgb(90, 47, 47)", fontSize:"15px" }}>
-				<NavbarBrand href="/"><GiCat /></NavbarBrand>
+			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid black', backgroundColor:"black", fontSize:"15px", boxShadow:"2px 2px 20px 10px black" }}>
+				<NavbarBrand className='logo' href="/"><GiCat /></NavbarBrand>
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="me-auto" navbar>
@@ -79,12 +79,12 @@ export const Header = () => {
 									<DropdownToggle nav caret>
 										{avatar ? <img className='myavatar' src={avatar}/> : <RxAvatar title={user.displayName}/>}
 									</DropdownToggle>
-									<DropdownMenu end>
-										<DropdownItem >
+									<DropdownMenu className='dropdownClass' end>
+										<DropdownItem className='dropItemClass' >
 										<NavLink className='nav-link' to="/profile">Personal data</NavLink>
 										</DropdownItem>
 										<DropdownItem divider />
-										<DropdownItem > 
+										<DropdownItem className='dropItemClass' > 
 										<NavLink className='nav-link' to="/deleteAccount">Delete account</NavLink>
 										</DropdownItem>
 									</DropdownMenu>

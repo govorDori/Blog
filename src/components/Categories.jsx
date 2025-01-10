@@ -12,7 +12,8 @@ export const Categories = ({selCateg,setSelCateg}) => {
 	}
 
 	return (
-		<div>
+		<div className='categoriesContainer'>
+			
 			{categories && categories.map(obj =>
 				<FormGroup check inline key={obj.id}>
 					<Input type="checkbox" value={obj.name} onChange={handleChange} checked={selCateg.includes(obj.name)}/>

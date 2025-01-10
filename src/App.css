@@ -17,13 +17,15 @@
 	height: 35vh;
 	object-position: center;
 	object-fit: cover;
-	border: 3px solid rgb(43, 3, 3) !important;
+	border: 3px solid rgb(80, 12, 12)!important;
 	border-radius: 35%;
 }
 
 body{
-	background-color: rgb(43, 3, 3) !important;
-	color: white !important;
+	background: #740202;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #190A05, #740202);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #190A05, #740202); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .headerContainer{
@@ -34,16 +36,21 @@ body{
 	width:30px;
 	height: 30px;
 	border-radius: 50%;
-	border: 2px solid black
+	border: 2px solid rgb(80, 12, 12);
 }
 
 .card{
 	width: 23rem;
 	padding: 10px;
-	background-color: rgb(90, 47, 47) !important;
-	color: rgb(43, 3, 3) !important;
+	background-color: rgba(0, 0, 0, 0.925) !important;
+	color: rgb(0, 0, 0) !important;
 	text-align: center;
-	border-radius:3%!important;
+	transition: transform 0.5s;
+	box-shadow: 3px 2px 20px 5px black!important;
+}
+
+.card:hover{
+	transform: translateY(-0.2rem);
 }
 
 h5{
@@ -55,17 +62,92 @@ h5{
 h1{
 	text-align: center;
 	font-weight: bold !important;
-	color: rgb(90, 47, 47) !important;
+	color: black !important;
 	margin-top: 8vh!important;
+	font-size: 70px!important;
+	text-transform: uppercase;
+	font-family: "Creepster", serif;
+	letter-spacing: 15px;
 }
 
 .nav-link{
-	color: rgb(43, 3, 3) !important;
+	color: rgb(43, 3, 3)!important;
 	font-size: 17px!important;
 	font-weight: bold!important;
+	font-size: 25px!important;
+	text-transform: uppercase;
+	font-family: "Creepster", serif;
+	letter-spacing: 2px;
+}
+
+.nav-link:hover{
+	color: rgb(43, 3, 3)!important;
+
+}
+
+a.nav-link{
+	color: rgb(80, 12, 12)!important;
 }
 
 .cardTitle{
-	color: rgb(43, 3, 3) !important;
+	color: rgb(80, 12, 12)!important;
 	text-decoration: none !important;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 25px;
 }
+
+.cardTitle:hover{
+	color: rgb(43, 3, 3)!important;
+}
+
+.logo{
+	color: rgb(80, 12, 12)!important;
+}
+
+.dropdownClass{
+	background-color: black!important;
+	box-shadow: 3px 2px 20px 7px black!important;
+}
+
+.dropItemClass:hover{
+	background-color: rgb(80, 12, 12)!important;
+	
+}
+
+.categoriesContainer{
+	margin-top: 20px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-family: "Creepster", serif;
+	color: black!important;
+	font-size: 30px;
+	letter-spacing: 2px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+
+}
+
+input[type="checkbox"] {
+	background: black;
+	border: none!important;
+	box-shadow: none!important;
+  }
+
+  input[type="checkbox"]:checked {
+	background:rgb(80, 12, 12);
+	border: 3px solid black!important;
+	box-shadow: none!important;
+
+  }
+  
+  .cardsContainer{
+	flex-wrap: wrap!important;
+	gap: 15px!important;
+
+  }

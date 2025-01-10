@@ -15,7 +15,7 @@ export const Home = () => {
 			<h1>Blog</h1>
 			<div className='imagesContainer'>
 				{categories && categories.map(obj =>
-					<Card className="card">
+					<Card className="card" key={obj.name}>
 						<img alt="Sample" src={obj.photoUrl} />
 						<CardBody>
 							<CardTitle tag="h5">
