@@ -6,10 +6,12 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Story } from '../components/Story'
 import { uploadFile } from '../utility/uploadFile'
-import { addPost } from '../utility/crudUtility'
+import { addPost, ReadPost, updatePost } from '../utility/crudUtility'
 import { CategContext } from '../context/CategContext'
 import { CategDropdown } from '../components/CategDropdown'
 import { Alerts } from '../components/Alerts'
+import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export const AddEditPost = () => {
 	const { categories } = useContext(CategContext)
@@ -19,13 +21,39 @@ export const AddEditPost = () => {
 	const [photo, setPhoto] = useState(null)
 	const [story, setStory] = useState(null)
 	const [selCateg, setSelCateg] = useState(null)
-	const { register, handleSubmit, formState: { errors }, reset } = useForm();
+	const [post,setPost]=useState(null)
+	const { register, handleSubmit, formState: { errors }, reset,setValue } = useForm();
+	const params=useParams()
+	console.log(params.id);
+	
+useEffect(()=>{
+	if(params?.id) ReadPost(params.id,setPost)
+},[params?.id])
 
+console.log(post);
+useEffect(()=>{
+	if(post){
+		setValue("title",post.title)
+		setSelCateg(post.category)
+		setStory(post.story)
+	}
+},[post])
 
 	if (!user) return <Home />
 
 	const onSubmit = async (data) => {
 		setLoading(true)
+		if(params.id){
+			try {
+				updatePost(params.id,{...data,category:selCateg,story})
+			} catch (error) {
+				console.log('update:', error);
+			} finally {
+				setLoading(false)
+			}
+		} else{
+
+		
 		let newPostData = {
 			...data,
 			story,
@@ -53,6 +81,7 @@ export const AddEditPost = () => {
 		} finally {
 			setLoading(false);
 		}
+	}
 	};
 console.log(story);
 
@@ -66,10 +95,11 @@ console.log(story);
 					<input {...register('title', {required:true})} type='text' />
 					<p className='text-danger'>{errors.title && 'Naming the post is required'}</p>
 				<CategDropdown categories={categories} setSelCateg={setSelCateg} selCateg={selCateg} />
-				<Story setStory={setStory} uploaded={uploaded}/>
+				<Story setStory={setStory} uploaded={uploaded} story={story} />
 				</div>
 				<div><label >Avatar: </label>
-					<input {...register('file', {
+					<input disabled={params.id} {...register('file',params.id?{} : {
+						required:!params.id,
 						validate: (value) => {
 							if (!value[0]) return true
 							const acceptedFormats = ['jpg', 'png']
@@ -88,7 +118,7 @@ console.log(story);
 			</form>
 			{loading && <p>Loading...</p>}
 					{uploaded && <Alerts txt='Successfully uploaded!'/>}
-			{photo && <img src={photo}/>}
+			<img src={post?.photo?.url ? post.photo.url : photo}/>
 		</div>
 
 	)
