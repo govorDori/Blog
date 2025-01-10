@@ -15,7 +15,7 @@ export const uploadFile = async (file) => {
 }
 
 //const url = "http://localhost:5000/post/"
-const url="https://blogserver-qz4h.onrender.com/post/"
+const url="https://blogserver-z53e.onrender.com/post/"
 
 export const delPhoto = async (id)=>{
 	console.log(id);

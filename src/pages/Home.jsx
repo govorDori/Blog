@@ -12,15 +12,14 @@ export const Home = () => {
 
 	return (
 		<div className='title'>
-			<h1>Take a look</h1>
-			<hr className='line'></hr>
+			<h1>Blog</h1>
 			<div className='imagesContainer'>
 				{categories && categories.map(obj =>
 					<Card className="card">
 						<img alt="Sample" src={obj.photoUrl} />
 						<CardBody>
 							<CardTitle tag="h5">
-								<NavLink to={'/posts?ctg='+obj.name}>{obj.name}</NavLink>
+								<NavLink className='cardTitle' to={'/posts?ctg='+obj.name}>{obj.name}</NavLink>
 							</CardTitle>
 
 						</CardBody>

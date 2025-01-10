@@ -7,7 +7,7 @@
 	align-items: center !important;
 	justify-content: center !important;
 	flex-wrap: wrap !important;
-	margin-top: 10% !important;
+	margin-top: 5% !important;
 	gap: 20px;
 }
 
@@ -17,12 +17,12 @@
 	height: 35vh;
 	object-position: center;
 	object-fit: cover;
-	border: 3px solid rgb(87, 9, 9);
-	border-radius: 10px;
+	border: 3px solid rgb(43, 3, 3) !important;
+	border-radius: 35%;
 }
 
 body{
-	background-color: rgb(87, 9, 9) !important;
+	background-color: rgb(43, 3, 3) !important;
 	color: white !important;
 }
 
@@ -34,15 +34,16 @@ body{
 	width:30px;
 	height: 30px;
 	border-radius: 50%;
+	border: 2px solid black
 }
 
 .card{
 	width: 23rem;
 	padding: 10px;
-	background-color: rgb(143, 121, 121) !important;
-	color: rgb(87, 9, 9) !important;
+	background-color: rgb(90, 47, 47) !important;
+	color: rgb(43, 3, 3) !important;
 	text-align: center;
-	border-radius: 15px!important;
+	border-radius:3%!important;
 }
 
 h5{
@@ -50,22 +51,21 @@ h5{
 	font-weight: bold !important;
 }
 
-.line{
-	width: 20%;
-	border: 2px solid rgb(197, 181, 181);
-	border-radius: 5px;
-	margin:auto;
-}
 
 h1{
 	text-align: center;
 	font-weight: bold !important;
-	color: rgb(143, 121, 121) !important;
-	margin-top: 20px!important;
+	color: rgb(90, 47, 47) !important;
+	margin-top: 8vh!important;
 }
 
 .nav-link{
-	color: rgb(87, 9, 9)!important;
+	color: rgb(43, 3, 3) !important;
 	font-size: 17px!important;
 	font-weight: bold!important;
+}
+
+.cardTitle{
+	color: rgb(43, 3, 3) !important;
+	text-decoration: none !important;
 }

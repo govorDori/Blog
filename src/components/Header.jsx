@@ -12,12 +12,12 @@ import {
 	DropdownItem
 } from 'reactstrap';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaBlog } from 'react-icons/fa';
 import { RxAvatar } from 'react-icons/rx';
 import { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import { useEffect } from 'react';
 import { extractUrlAndId } from '../utility/utils';
+import { GiCat } from 'react-icons/gi';
 
 export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,8 @@ export const Header = () => {
 
 	return (
 		<div className='headerContainer'>
-			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid rgb(143, 121, 121)', backgroundColor:"rgb(143, 121, 121)", fontSize:"15px" }}>
-				<NavbarBrand href="/"><FaBlog /></NavbarBrand>
+			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid rgb(90, 47, 47)', backgroundColor:"rgb(90, 47, 47)", fontSize:"15px" }}>
+				<NavbarBrand href="/"><GiCat /></NavbarBrand>
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="me-auto" navbar>

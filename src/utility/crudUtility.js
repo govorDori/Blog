@@ -37,7 +37,6 @@ export const ReadPost= async(id,setPost)=>{
 		setPost({...snapshot.data(),id:snapshot.id})
 	})
 
-	setPost({...docSnap.data(),id:docSnap.id})
 	return unsubscribe
 }
 
