@@ -18,14 +18,14 @@ export const MyCard = ({ id, title, category, story, photo }) => {
 				src={photo['url']}
 			/>
 			<CardBody>
-				<CardTitle tag="h5">
+				<CardTitle className="cardTitlePost" tag="h5">
 					{title}
 				</CardTitle>
-				<CardSubtitle className="mb-2 text-muted" tag="h6">
-					{category}
+				<CardSubtitle className="mb-2 cardSubtitle" tag="h6">
+				{sanitizeHTML(story).substring(0,30)}
 				</CardSubtitle>
 				<CardText>
-					{sanitizeHTML(story).substring(0,30)}
+					{category}
 				</CardText>
 			</CardBody>
 		</Card>

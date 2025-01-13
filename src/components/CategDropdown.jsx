@@ -9,12 +9,12 @@ export const CategDropdown = ({categories,selCateg,setSelCateg}) => {
   return (
     <div className="d-flex p-5">
       <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>
+        <DropdownToggle className='categMenu' caret>
 			{selCateg ? selCateg : "Category"}
 		</DropdownToggle>
-        <DropdownMenu>
+        <DropdownMenu className='categMenuDrop' >
 			{categories ? categories.map(obj=>
-          		<DropdownItem key={obj.name}
+          		<DropdownItem className='categMenuSelect' key={obj.name}
 				onClick={()=>setSelCateg(obj.name)}
 				>
 					{obj.name}

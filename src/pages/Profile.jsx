@@ -56,16 +56,16 @@ export const Profile = () => {
 };
 
   return (
-    <div className='page'>
-      <div >
-        <h3>Account settings</h3>
+    <div className='pageProfile'>
+      <div className='profileContainer'>
+        <h3 className='profileTitle'>Account settings</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
 
-          <div><label >Username: </label>
-            <input {...register('displayName')} placeholder='username' type='text' />
+          <div><label className='userLabel'>Username: </label>
+            <input className='inputProfile' {...register('displayName')} placeholder='username' type='text' />
           </div>
-          <div><label >Profile pic: </label>
-            <input {...register('file',{
+          <div><label className='pfpLabel' >Profile pic:</label>
+            <input className='pfpUploadButton' {...register('file',{
               validate:(value)=>{
                   if(!value[0]) return true
                   const acceptedFormats=['jpg','png']
@@ -79,11 +79,13 @@ export const Profile = () => {
             onChange={(e)=>setAvatar(URL.createObjectURL(e.target.files[0]))}
             />
           </div>
-          <input type="submit" />
+          <div className='submitContainer'>
+            <input className='pfpSubmit' type="submit" />
+          </div>
         </form>
 		{loading && <p>Loading...</p>}
 		{msg && <Toastify {...msg}/>}
-     {avatar && <img src={avatar} />}
+     {avatar && <img className='profilePhoto' src={avatar} />}
       </div>
       
     </div>

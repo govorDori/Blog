@@ -32,7 +32,7 @@ export const DeleteAccount = () => {
 
   return (
 	<div className='page'>
-		<button className="btn btn-danger" onClick={handleDelete}>Delete account</button>
+		<button className="deleteAccountButton" onClick={handleDelete}>Delete account</button>
 	  
 	</div>
   )

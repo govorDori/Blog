@@ -37,7 +37,7 @@ export const Header = () => {
 
 	return (
 		<div className='headerContainer'>
-			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid black', backgroundColor:"black", fontSize:"15px", boxShadow:"2px 2px 20px 10px black" }}>
+			<Navbar className="nav" expand="md" style={{ borderBottom: '3px solid black', backgroundColor:"black", fontSize:"15px", boxShadow:"5px 10px 50px 20px black" }}>
 				<NavbarBrand className='logo' href="/"><GiCat /></NavbarBrand>
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>

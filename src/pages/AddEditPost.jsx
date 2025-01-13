@@ -88,17 +88,17 @@ console.log(story);
 	
 
 	return (
-		<div className='page'>
+		<div className='pageAddEdit'>
 			<form onSubmit={handleSubmit(onSubmit)}>
 
-				<div><label >Post name:  </label>
-					<input {...register('title', {required:true})} type='text' />
+				<div><label className='postNameAddEdit'>Post name:</label>
+					<input className='addTextField' {...register('title', {required:true})} type='text' />
 					<p className='text-danger'>{errors.title && 'Naming the post is required'}</p>
-				<CategDropdown categories={categories} setSelCateg={setSelCateg} selCateg={selCateg} />
+				<CategDropdown className="categMenu" categories={categories} setSelCateg={setSelCateg} selCateg={selCateg} />
 				<Story setStory={setStory} uploaded={uploaded} story={story} />
 				</div>
-				<div><label >Avatar: </label>
-					<input disabled={params.id} {...register('file',params.id?{} : {
+				<div><label className='avatarLabel'>Upload pic: </label>
+					<input className='uploadButton' disabled={params.id} {...register('file',params.id?{} : {
 						required:!params.id,
 						validate: (value) => {
 							if (!value[0]) return true
@@ -114,11 +114,15 @@ console.log(story);
 					/>
 					<p className='text-danger'>{errors?.file?.message}</p>
 				</div>
-				<input type="submit" disabled={!selCateg || !story} />
+				<div className='submitContainer'>
+					<input className='submitButton' type="submit" disabled={!selCateg || !story} />
+				</div>
 			</form>
 			{loading && <p>Loading...</p>}
 					{uploaded && <Alerts txt='Successfully uploaded!'/>}
-			<img src={post?.photo?.url ? post.photo.url : photo}/>
+					<div className='addEditPhotoDiv'>
+				<img className='addEditPhoto' src={post?.photo?.url ? post.photo.url : photo}/>
+			</div>
 		</div>
 
 	)

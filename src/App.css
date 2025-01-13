@@ -1,6 +1,124 @@
 .page{
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
+
+.pageAddEdit{
+	margin-top: 15vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	background-color: #000000;
+	box-shadow: 5px 5px 40px 15px black;
+}
+
+.postNameAddEdit{
+	text-transform: uppercase;
+	font-family: "Philosopher", serif!important;
+	font-size: 25px;
+	color: #740202;
+	font-weight: bold;
+}
+
+.categMenu{
+	background-color: #290606!important;
+	width: 210px;
+	border: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-size: 20px!important;
+	padding: 10px!important;
+	font-family: "Philosopher", serif!important;
+}
+
+.categMenu:hover{
+	background-color: #740202!important;
+	color: #000000!important;
+}
+
+.categMenuSelect{
+	background-color: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-family: "Philosopher", serif!important;
+}
+
+.categMenuSelect:hover{
+	background-color: #290606!important;
+}
+
+.categMenuDrop{
+	background-color: #000000!important;
+}
+
+.addEditPhoto{
+	max-width: 90vh;
+	border-radius: 10px;
+}
+
+.addEditPhotoDiv{
+	margin-top: 10px;
+	border: 1px solid #290606;
+	padding: 10px;
+	background-color: #290606;
+	border-radius: 10px;
+}
+
+.addTextField{
+	margin: 10px;
+	background-color: black;
+	border: 2px solid #290606;
+	border-radius: 15px;
+}
+
+.avatarLabel{
+	margin-top: 15px;
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-family: "Philosopher", serif!important;
+	font-size: 20px;
+	padding: 8px;
+	color: #740202;
+	font-weight: bold;
+}
+
+.uploadButton{
+	background-color: #290606!important;
+	border: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-size: 20px!important;
+	padding: 5px!important;
+	font-family: "Philosopher", serif!important;
+}
+
+.submitButton{
+	background-color: #290606!important;
+	border: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-size: 20px!important;
+	padding: 5px!important;
+	font-family: "Philosopher", serif!important;
+	border-radius: 10px;
+	width: 100px;
+}
+
+.submitButton:active{
+	transform: translateY(4px);
+	transition: 0.2s;
+}
+
+.submitButton:disabled{
+	background-color: rgba(94, 38, 38, 0.904)!important;
+	color: white!important;
+}
+
 
 .imagesContainer{
 	display: flex !important;
@@ -46,7 +164,7 @@ background: linear-gradient(to right, #190A05, #740202); /* W3C, IE 10+/ Edge, F
 	color: rgb(0, 0, 0) !important;
 	text-align: center;
 	transition: transform 0.5s;
-	box-shadow: 3px 2px 20px 5px black!important;
+	box-shadow: 3px 2px 40px 10px black!important;
 }
 
 .card:hover{
@@ -92,10 +210,10 @@ a.nav-link{
 .cardTitle{
 	color: rgb(80, 12, 12)!important;
 	text-decoration: none !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-weight: bold;
+	font-family: "Philosopher", serif!important;
+	font-weight: bold!important;
 	letter-spacing: 2px;
-	font-size: 25px;
+	font-size: 27px;
 }
 
 .cardTitle:hover{
@@ -117,7 +235,7 @@ a.nav-link{
 }
 
 .categoriesContainer{
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 25px;
 	text-align: center;
 	font-family: "Creepster", serif;
@@ -148,6 +266,353 @@ input[type="checkbox"] {
   
   .cardsContainer{
 	flex-wrap: wrap!important;
-	gap: 15px!important;
+	gap: 20px!important;
 
   }
+
+  .card-title{
+	color: rgb(80, 12, 12) !important;
+	font-family: "Creepster", serif;
+	letter-spacing: 2px;
+	font-size: 30px!important;
+  }
+
+  .card-text{
+	color: #740202;
+	float: right   !important;
+	font-weight: bold;
+	font-size: 13px;
+	font-family: "Philosopher", serif;
+	border: 1px solid #290606;
+	background-color: #290606;
+	padding: 5px;
+	border-radius: 100%;
+
+  }
+
+  .cardSubtitle{
+	color: #740202!important;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Philosopher", serif;
+  }
+
+  .cardTitlePost{
+	color: rgb(80, 12, 12) !important;
+	font-family: "Creepster", serif;
+	letter-spacing: 2px;
+	font-size: 30px!important;
+	border: 1px solid #290606;
+	background-color: #290606;
+	border-radius: 4px;
+  }
+
+  .App-header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px!important;
+  }
+
+  
+
+.wrapper{
+	background-color: black!important;
+	border: 1px solid black!important;
+	color: #740202!important;
+	box-shadow: 2px 2px 20px 5px black!important;
+
+}
+
+.wrapper:hover{
+	box-shadow: 2px 2px 20px 5px black!important;
+}
+
+.search-icon{
+	width: 30px !important;
+	height: 30px!important;
+	background-color: #740202!important;
+	border-radius: 50%;
+	padding: 4px!important;
+}
+
+input[type="text"]{
+	color: #000000!important;
+	font-size: 17px !important;
+	font-weight: bold;
+	font-family: "Philosopher", serif!important;
+	background-color: #460a0a;
+}
+
+
+.img-fluid{
+	object-position: center!important;
+	object-fit: cover!important;
+	width: 30vh!important;
+	height: 30vh!important;
+
+}
+
+.detailDiv{
+	text-align: center;
+	border: 1px solid black;
+	width: 60vh;
+	height: 63vh;
+	background-color: black;
+	box-shadow: 5px 5px 60px 15px black;
+	font-size: 30px;
+	font-family: "Creepster", serif;
+	letter-spacing: 5px;
+	border-radius: 5%;
+	max-width: auto !important;
+}
+
+.detailPhoto{
+max-width: 45vh!important;
+border-radius: 5px;
+margin-top: 5vh;
+}
+
+.detailP{
+	margin-top: 15px;
+	font-size: 40px;
+	letter-spacing: 5px;
+	color: #740202;
+}
+
+.likeButton{
+	padding: 3px;
+	width: 111px;
+	border-radius: 10px;
+	background-color: #740202;
+	border: 2px solid black;
+	margin-bottom: 10px;
+}
+
+.likeButton:hover,.deleteButton:hover,.editButton:hover,.returnButton:hover{
+	background-color: #460a0a;
+	transition: 0.6s;
+}
+
+.likeButton:active{
+	transform: translateY(4px);
+	transition: 0.2s;
+	background-color: #290606;
+}
+
+.spanTag{
+	margin-top: 15px;
+	font-family: "Philosopher", serif!important;
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+}
+
+.deleteButton{
+	padding: 3px;
+	width: 50px;
+	border-radius: 7px;
+	background-color: #740202;
+	border: 2px solid black;
+}
+
+.editButton{
+	padding: 3px;
+	width: 50px;
+	border-radius: 7px;
+	background-color: #740202;
+	border: 2px solid black;
+	margin-left: 10px;
+}
+
+.returnButton{
+	padding: 3px;
+	width: 150px;
+	border-radius: 9px;
+	background-color: #740202;
+	border: 2px solid black;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: "Philosopher", serif!important;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.pageProfile{
+
+}
+
+.profileContainer{
+	display: flex!important;
+	flex-direction: column!important;
+	align-items: center!important;
+	justify-content: center!important;
+}
+
+.profileTitle{
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 70px;
+	font-family: "Creepster", serif;
+	letter-spacing: 4px;
+	color: #000000;
+}
+
+.userLabel{
+	font-size: 30px;
+	font-family: "Philosopher", serif!important;
+	color: #000000;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.pfpLabel{
+font-size: 30px;
+font-family: "Philosopher", serif!important;
+font-weight: bold;
+color: black;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+.pfpUploadButton{
+	background-color: #290606!important;
+	border: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-size: 20px!important;
+	padding: 5px!important;
+	font-family: "Philosopher", serif!important;
+}
+
+.pfpSubmit{
+	margin-top: 25px;
+	background-color: #290606!important;
+	border: #000000!important;
+	color: #740202!important;
+	font-weight: bold!important;
+	font-size: 20px!important;
+	padding: 5px!important;
+	font-family: "Philosopher", serif!important;
+	border-radius: 10px;
+	width: 100px;
+}
+
+.pfpSubmit:hover{
+	background-color: #740202!important;
+	color: #000000!important;
+	transition: 0.6s;
+}
+
+.pfpSubmit:active{
+	transform: translateY(4px);
+	transition: 0.2s;
+}
+
+.submitContainer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profilePhoto{
+	margin-top: 40px;
+	max-width: 70vh;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: black;
+	border-radius: 5px;
+	box-shadow: 10px 7px 60px 20px black;
+}
+
+.inputProfile{
+	background-color: #000000;
+	border: 2px solid black;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.deleteAccountButton{
+	font-size: 60px;
+	text-transform: uppercase;
+	font-family: "Philosopher", serif!important;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 15px;
+	background-color: #000000;
+	font-weight: bold;
+	padding: 10px;
+	box-shadow: 10px 7px 60px 20px black;
+	color: #740202;
+}
+
+.signInUp,.pwResetTitle{
+	font-size: 45px;
+	font-family: "Creepster", serif;
+	text-align: center;
+	letter-spacing: 3px;
+	color: #740202;
+}
+
+.emailLoginLabel,.pwLoginLabel,.signupUsernameLabel,.pwResetLabel{
+	font-family: "Philosopher", serif!important;
+	font-size: 20px!important;
+	color: #740202;
+}
+
+.emailLoginTextField,.pwLoginTextField,.usernameSignUpTextField,.pwResetTextField{
+	background-color: #740202!important;
+	border: 2px solid #460a0a!important;
+	color: #000000!important;
+	box-shadow: none!important;
+	font-weight: bold!important;
+	font-family: "Philosopher", serif!important;
+}
+
+.signinupSubmit{
+	background-color: #740202!important;
+	border: 2px solid #460a0a!important;
+	width: 170px;
+	color: #000000!important;
+	font-family: "Philosopher", serif!important;
+	font-size: 20px!important;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.signinupSubmitContainer,.forgotPwButtonContainer,.pwResetButtonContainer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.forgotPwButton{
+	background-color: #740202!important;
+	border: 2px solid #460a0a!important;
+	width: 170px;
+	color: #000000!important;
+	font-family: "Philosopher", serif!important;
+	font-size: 16px!important;
+	text-transform: uppercase;
+}
+
+.signinupSubmit:hover,.forgotPwButton:hover,.pwResetButton:hover{
+	background-color: #290606!important;
+	color: #740202!important;
+	transition: 0.6s;
+}
+
+.signinupSubmit:active,.forgotPwButton:active{
+	transform: translateY(4px);
+	transition: 0.2s;
+}
+
+.pwResetButton{
+	margin-top: 15px;
+	background-color: #740202!important;
+	border: 2px solid #460a0a!important;
+	width: 200px;
+	color: #000000!important;
+	font-family: "Philosopher", serif!important;
+	font-size: 16px!important;
+	text-transform: uppercase;
+}

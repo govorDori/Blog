@@ -37,7 +37,7 @@ export const SearchBox=({items})=> {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{ width: 400 }}>
+        <div style={{ width: 300 }}>
           <ReactSearchAutocomplete
             items={items}
             onSearch={handleOnSearch}

@@ -5,11 +5,17 @@ import { useContext } from 'react'
 import { UserContext } from '../context/UserContext'
 import { Toastify } from '../components/Toastify'
 const middleStyle={
-	width:'300px',
+	border:'1px solid black',
+	backgroundColor:'black',
+	width:'500px',
+	height:'250px',
 	position:'absolute',
 	top:'50%',
 	left:'50%',
 	transform:'translate(-50%, -50%)',
+	padding:'15px',
+	boxShadow: '10px 7px 60px 20px black',
+	borderRadius:'10px'
 }
 
 
@@ -26,14 +32,15 @@ export const PwReset = () => {
   return (
     <div className='page'>
     <div  style={middleStyle}	>
-     <h3>Jelszó módosítás</h3>
+     <h3 className='pwResetTitle'>Reset password</h3>
      <Form onSubmit={handleSubmit}>
        <FormGroup>
-         <Label > Email  </Label>
-         <Input   name="email"    placeholder="email"    type="email"    />
+         <Label className='pwResetLabel'> Email  </Label>
+         <Input className='pwResetTextField'  name="email"    placeholder="email"    type="email"    />
        </FormGroup>
-       
-       <Button>Set new password</Button>
+       <div className='pwResetButtonContainer'>
+        <Button className='pwResetButton'>Set new password</Button>
+       </div>
      </Form>
      
      {msg && <Toastify  {...msg}/>}

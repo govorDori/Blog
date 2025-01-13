@@ -7,11 +7,18 @@ import { Toastify } from '../components/Toastify'
 import { useEffect } from 'react'
 
 const middleStyle={
-	width:'300px',
+	border:'1px solid black',
+	backgroundColor:'black',
+	width:'400px',
+	height:'440px',
 	position:'absolute',
 	top:'50%',
 	left:'50%',
 	transform:'translate(-50%, -50%)',
+	padding:'15px',
+	boxShadow: '10px 7px 60px 20px black',
+	borderRadius:'10px'
+
 }
 
 export const Auth = () => {
@@ -47,11 +54,11 @@ useEffect(()=>{
 	return (
 		<div className='page'>
 			<div style={middleStyle}>
-				<h3>{isSignin ? 'Sign In' : 'Sign Up'}</h3>
+				<h3 className='signInUp'>{isSignin ? 'Sign In' : 'Sign Up'}</h3>
 				<Form onSubmit={handleSubmit}>
 					<FormGroup>
-						<Label>Email</Label>
-						<Input
+						<Label className='emailLoginLabel'>Email</Label>
+						<Input className='emailLoginTextField'
 							name="email"
 							placeholder="email"
 							type="email"
@@ -59,10 +66,10 @@ useEffect(()=>{
 
 					</FormGroup>
 					<FormGroup>
-						<Label>
+						<Label className='pwLoginLabel'>
 							Password
 						</Label>
-						<Input
+						<Input className='pwLoginTextField'
 							name="password"
 							placeholder="password"
 							type="password"
@@ -71,20 +78,24 @@ useEffect(()=>{
 					</FormGroup>
 					{!isSignin &&
 					<FormGroup>
-						<Label>
+						<Label className='signupUsernameLabel'>
 							Username
 						</Label>
-						<Input name="displayName" type="text" placeholder='username'
+						<Input className='usernameSignUpTextField' name="displayName" type="text" placeholder='username'
 						/>
 					</FormGroup>
 					}
-					<Button>
-						Submit
-					</Button>
+					<div className='signinupSubmitContainer'>
+						<Button className='signinupSubmit'>
+							Submit
+						</Button>
+					</div>
 				</Form>
 				{isSignin && (
-					<NavLink to="/pwReset">
-						<Button>Forgotten password</Button>
+					<NavLink style={{textDecoration:"none"}} to="/pwReset">
+						<div className='forgotPwButtonContainer'>
+							<Button className='forgotPwButton' >Forgotten password</Button>
+						</div>
 					</NavLink>
 
 				)}
